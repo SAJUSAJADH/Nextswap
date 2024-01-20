@@ -1,7 +1,7 @@
-import { SettingOutlined } from "@ant-design/icons";
-import { Input } from "antd";
+import { useRouter } from "next/navigation";
 
 export function Hero() {
+  const router = useRouter();
   return (
     <div className="container w-full mx-auto px-8 lg:px-32 flex flex-col justify-center gap-4 lg:gap-6 items-center min-h-screen">
       <div className="flex flex-col gap-3">
@@ -15,14 +15,17 @@ export function Hero() {
       <p className="text-lg md:text-xl text-[#7D7D7D] font-marryweather text-center lg:leading-relaxed pb-2">
         Swap, send, and explore tokens and NFTs
       </p>
-      <button className="text-xl bg-pink-500 hover:bg-pink-600 text-white rounded-xl px-4 py-2">
+      <button
+        className="text-xl bg-pink-500 hover:bg-pink-600 text-white rounded-xl px-4 py-2"
+        onClick={() => router.push("/swap")}
+      >
         Get started
       </button>
       <a
-        href=""
+        href="/transaction"
         className="text-lg md:text-xl text-[#7D7D7D] font-marryweather text-center lg:leading-relaxed"
       >
-        Learn more
+        View Transactions
       </a>
     </div>
   );

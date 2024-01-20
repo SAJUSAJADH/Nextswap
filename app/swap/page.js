@@ -1,7 +1,7 @@
 "use client";
 
 import { unstable_noStore as noStore } from "next/cache";
-import { Header } from "@/components/navigations";
+import { Header, MiniHeader } from "@/components/navigations";
 import React, { useState, useEffect, useRef } from "react";
 import { Popover, Radio, Modal } from "antd";
 import {
@@ -41,20 +41,20 @@ export default function Swap() {
   });
 
   async function dexSwap() {
-    try {
-      const apiUrl = `https://api.1inch.io/v5.0/1/approve/allowance?tokenAddress=${tokenOne.address}&walletAddress=${address}`;
-      const options = {
-        method: "GET",
-        headers: {
-          accept: "application/json",
-        },
-      };
-      const response = await fetch(apiUrl, options);
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error("Error calling API:", error);
-    }
+    // try {
+    //   const apiUrl = `https://api.1inch.io/v5.0/1/approve/allowance?tokenAddress=${tokenOne.address}&walletAddress=${address}`;
+    //   const options = {
+    //     method: "GET",
+    //     headers: {
+    //       accept: "application/json",
+    //     },
+    //   };
+    //   const response = await fetch(apiUrl, options);
+    //   const data = await response.json();
+    //   console.log(data);
+    // } catch (error) {
+    //   console.error("Error calling API:", error);
+    // }
   }
 
   async function getPrice(tokenOneAddress, tokenTwoAddress) {
@@ -176,6 +176,7 @@ export default function Swap() {
   return (
     <>
       <Header />
+      <MiniHeader />
       <div className="container flex flex-col min-h-screen justify-center px-3 mx-auto items-center">
         <Modal
           open={isOpen}

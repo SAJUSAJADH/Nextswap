@@ -1,11 +1,16 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export function Functions() {
+  const router = useRouter();
   return (
     <>
-      <div className="mx-auto container px-3 lg:px-16">
+      <div id="functions" className="mx-auto container px-3 lg:px-16">
         <div className=" mt-4 grid lg:grid-cols-2 gap-4">
-          <div className="bg-white container shadow-xl hover:border-2 rounded-xl cursor-pointer grid grid-cols-3 md:grid-cols-2 py-2">
+          <div
+            className="bg-white container shadow-xl hover:border-2 rounded-xl cursor-pointer grid grid-cols-3 md:grid-cols-2 py-2"
+            onClick={() => router.push("/swap")}
+          >
             <div className="pl-8 col-span-2 md:col-span-1 space-y-16 flex flex-col justify-between px-2">
               <div className="pt-2">
                 <p className="text-2xl font-roboto font-bold">Swap tokens</p>
@@ -28,7 +33,10 @@ export function Functions() {
               />
             </div>
           </div>
-          <div className="bg-white container shadow-xl hover:border-2 rounded-xl cursor-pointer grid grid-cols-3 md:grid-cols-2 py-2">
+          <div
+            className="bg-white container shadow-xl hover:border-2 rounded-xl cursor-pointer grid grid-cols-3 md:grid-cols-2 py-2"
+            onClick={() => router.push("/send")}
+          >
             <div className="pl-8 col-span-2 md:col-span-1 space-y-16 flex flex-col justify-between px-2">
               <div className="pt-2">
                 <p className="text-2xl font-roboto font-bold">Send tokens</p>
@@ -58,11 +66,15 @@ export function Functions() {
 }
 
 export function Features() {
+  const router = useRouter();
   return (
     <>
       <div className="mx-auto container px-3 lg:px-16">
         <div className=" mt-10 grid lg:grid-cols-3 gap-4">
-          <div className="bg-white container shadow-xl hover:border-2 rounded-xl cursor-pointer grid grid-cols-3 py-2">
+          <div
+            className="bg-white container shadow-xl hover:border-2 rounded-xl cursor-pointer grid grid-cols-3 py-2"
+            onClick={() => router.push("/swap")}
+          >
             <div className="pl-8 col-span-2 flex flex-col justify-between px-2 space-y-16">
               <div className="pt-2">
                 <p className="text-2xl font-roboto font-bold">Swap tokens</p>
@@ -85,7 +97,10 @@ export function Features() {
               />
             </div>
           </div>
-          <div className="bg-white container shadow-xl hover:border-2 rounded-xl cursor-pointer grid grid-cols-3 py-2">
+          <div
+            className="bg-white container shadow-xl hover:border-2 rounded-xl cursor-pointer grid grid-cols-3 py-2"
+            onClick={() => router.push("/send")}
+          >
             <div className="pl-8 col-span-2 flex flex-col justify-between px-2 space-y-16">
               <div className="pt-2">
                 <p className="text-2xl font-roboto font-bold">Send tokens</p>
@@ -103,7 +118,10 @@ export function Features() {
               <Image src={"/arrow.png"} alt="swapcard" width={50} height={50} />
             </div>
           </div>
-          <div className="bg-white container shadow-xl hover:border-2 rounded-xl cursor-pointer grid grid-cols-3 py-2">
+          <div
+            className="bg-white container shadow-xl hover:border-2 rounded-xl cursor-pointer grid grid-cols-3 py-2"
+            onClick={() => router.push("/explore")}
+          >
             <div className="pl-8 col-span-2 flex flex-col justify-between px-2 space-y-16">
               <div className="pt-2">
                 <p className="text-2xl font-roboto font-bold">Explore Tokens</p>

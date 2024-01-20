@@ -11,7 +11,7 @@ module.exports = {
       lexend: "Lexend",
       roboto: ["Roboto Slab", "serif"],
       marryweather: ["Merriweather Sans", "sans-serif"],
-      poppins: ['Poppins, sans-serif'],
+      poppins: ["Poppins, sans-serif"],
     },
     backgroundImage: {
       pinkish: ["radial-gradient(75% 100% at 70% 100%,#ff007a1a 0,#fff0 100%)"],

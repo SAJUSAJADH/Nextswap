@@ -1,4 +1,6 @@
-# [<span style="color:#000080">Nextswap</span>](https://nextswap.vercel.app/)- Decentralized Finance and NFT Explorer
+# [<span style="color:#000080">Nextswap</span>](https://nextswap.vercel.app/)-Decentralized Finance and NFT Explorer
+
+# Checkout Smart Contract at [Nextswap contract source code](https://sepolia.etherscan.io/address/0x0174ae013a8a0c2327c5d8de697e87591f7c9fb8#code ) (Deployed & ✔️ Verified)
 
 Welcome to Nextswap, a decentralized application (DApp) that leverages the power of **Solidity, Ethers.js, Hardhat, Wagmi, Moralis, React, Node.js, Next.js, Tailwind CSS, and RainbowKit**. Explore a seamless experience in decentralized finance (DeFi) and non-fungible tokens (NFTs) with the following key features:
 

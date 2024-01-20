@@ -103,25 +103,26 @@ export function Header() {
 }
 
 export function Footer() {
+  const router = useRouter();
   return (
     <div className="container mx-auto px-3 lg:px-16 mt-24 py-4">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
         <div className=" flex flex-col gap-2 justify-center items-center">
           <p className="text-lg font-semibold font-sans">App</p>
           <a
-            href=""
+            href="/swap"
             className="text-[#7D7D7D] text-base hover:opacity-60 font-semibold tracking-wider"
           >
             Swap
           </a>
           <a
-            href=""
+            href="send"
             className="text-[#7D7D7D] text-base hover:opacity-60 font-semibold tracking-wider"
           >
             Send
           </a>
           <a
-            href=""
+            href="/explore"
             className="text-[#7D7D7D] text-base hover:opacity-60 font-semibold tracking-wider"
           >
             NFTs
@@ -130,13 +131,13 @@ export function Footer() {
         <div className="flex flex-col gap-2 justify-center items-center">
           <p className="text-lg font-semibold font-sans">Get help</p>
           <a
-            href=""
+            href="contact"
             className="text-[#7D7D7D] text-base hover:opacity-60 font-semibold tracking-wider"
           >
             Contact us
           </a>
           <a
-            href=""
+            href="/faq"
             className="text-[#7D7D7D] text-base hover:opacity-60 font-semibold tracking-wider"
           >
             Help centre
@@ -144,14 +145,65 @@ export function Footer() {
         </div>
         <div className=" md:order-first col-span-2 flex flex-col justify-center items-center">
           <div className="flex gap-4 justify-center items-center">
-            <GithubOutlined className="text-4xl opacity-40 hover:opacity-100 cursor-pointer" />
-            <TwitterOutlined className="text-4xl opacity-40 hover:opacity-100 cursor-pointer" />
-            <LinkedinOutlined className="text-4xl opacity-40 hover:opacity-100 cursor-pointer" />
+            <GithubOutlined
+              className="text-4xl opacity-40 hover:opacity-100 cursor-pointer"
+              onClick={() => router.push("https://github.com/SAJUSAJADH")}
+            />
+            <TwitterOutlined
+              className="text-4xl opacity-40 hover:opacity-100 cursor-pointer"
+              onClick={() => router.push("https://twitter.com/CrypExplorer")}
+            />
+            <LinkedinOutlined
+              className="text-4xl opacity-40 hover:opacity-100 cursor-pointer"
+              onClick={() =>
+                router.push("https://www.linkedin.com/in/sajusajadh/")
+              }
+            />
           </div>
           <p className="text-base text-[#CECECE] mt-4">
             &copy;2024 Nextswap Lab
           </p>
         </div>
+      </div>
+    </div>
+  );
+}
+
+export function MiniHeader() {
+  const router = useRouter();
+  return (
+    <div className="fixed bg-white shadow-2xl w-full px-3 rounded-full z-50 mb-auto grid grid-cols-4 gap-3 justify-center items-center lg:hidden bottom-3">
+      <div
+        className="flex justify-center items-center py-3 rounded-l-full hover:bg-[#99a1bd14]"
+        onClick={() => router.push("/swap")}
+      >
+        <p className="text-[#7d7d7d] tracking-wider text-md font-roboto font-semibold">
+          Swap
+        </p>
+      </div>
+      <div
+        className="flex justify-center items-center py-3 hover:bg-[#99a1bd14]"
+        onClick={() => router.push("/send")}
+      >
+        <p className="text-[#7d7d7d] tracking-wider text-md font-roboto font-semibold">
+          Send
+        </p>
+      </div>
+      <div
+        className="flex justify-center items-center py-3 hover:bg-[#99a1bd14]"
+        onClick={() => router.push("/explore")}
+      >
+        <p className="text-[#7d7d7d] tracking-wider text-md font-roboto font-semibold">
+          Token
+        </p>
+      </div>
+      <div
+        className="flex justify-center items-center py-3 hover:bg-[#99a1bd14]"
+        onClick={() => router.push("/explore")}
+      >
+        <p className="text-[#7d7d7d] tracking-wider text-md font-roboto font-semibold ">
+          NFTs
+        </p>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import backgroundImage from "../public/pattern.png";
 import { useRouter } from "next/navigation";
 
 export default function Tag() {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <>
       <div className="container mx-auto px-3 lg:px-16 mt-24">
@@ -17,8 +17,9 @@ export default function Tag() {
               <p className="lg:col-span-2 text-white text-2xl md:text-4xl font-semibold tracking-widest">
                 Powered by the Nextswap Protocol
               </p>
-              <button className=" lg:ml-auto w-1/2 px-2 py-1 bg-transparent rounded-xl text-white font-semibold border hover:border-pink-100 border-white"
-              onClick={()=>router.push('/transaction')}
+              <button
+                className=" lg:ml-auto w-1/2 px-2 py-1 bg-transparent rounded-xl text-white font-semibold border hover:border-pink-100 border-white"
+                onClick={() => router.push("/transaction")}
               >
                 Live Transactions
               </button>
