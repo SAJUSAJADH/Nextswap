@@ -133,12 +133,12 @@ export function LaunchingTagTwo() {
           alt="unigrants"
         />
         <p className="text-white text-xl font-medium font-poppins">
-          Apply for funding from the Uniswap Grants Program
+          Apply for funding from the Nextswap Grants Program
         </p>
         <p className="font-poppins text-[#888D9B] text-xl font-medium text-opacity-90 md:text-opacity-80">
-          Get paid to build the future of finance. Uniswap Governance offers
+          Get paid to build the future of finance. Nextswap Governance offers
           grant funding for people building apps, tools, and activities on the
-          Uniswap Protocol.
+          Nextswap Protocol.
         </p>
       </div>
     </div>
@@ -175,7 +175,7 @@ export function LaunchingTagThree() {
               Governed by the community.
             </p>
             <p className="font-poppins text-[#888D9B] text-xl font-medium text-opacity-90">
-              The Uniswap Protocol is managed by a global community of UNI token
+              The Nextswap Protocol is managed by a global community of UNI token
               holders and delegates.
             </p>
             <button
@@ -194,7 +194,7 @@ export function LaunchingTagThree() {
           </a>
           <p className="font-poppins text-[#888D9B] text-sm md:text-lg font-semibold text-opacity-90 md:text-opacity-80">
             Participate by proposing upgrades and discussing the future of the
-            protocol with the Uniswap community.
+            protocol with the Nextswap community.
           </p>
         </div>
         <div className={cardFunctions()}>

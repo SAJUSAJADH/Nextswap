@@ -324,7 +324,7 @@ export function LaunchFooter() {
         </div>
         <div className="w-4/5">
           <p className="text-white text-sm font-poppins text-opacity-60">
-            Media inquires for Uniswap Labs - Contact{" "}
+            Media inquires for Nextswap Labs - Contact{" "}
             <span className="text-white text-opacity-100 font-semibold hover:text-opacity-60 tracking-widest">
               <a href="https://nextswap.vercel.app/">nextswap.vercel.app</a>
             </span>
