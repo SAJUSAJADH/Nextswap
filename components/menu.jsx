@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function Menu() {
   const menus = [
-    { name: "Ecosystem", href: "/" },
+    { name: "Ecosystem", href: "/ecosystem" },
     { name: "Community", href: "/" },
     { name: "Governance", href: "/" },
     { name: "Developers", href: "/" },
     { name: "FAQ", href: "/" },
-    { name: "Blogs", href: "/" },
+    { name: "Blogs", href: "/blog" },
   ];
 
   return (

@@ -66,22 +66,23 @@ export function LaunchHero() {
         <p className="font-poppins font-light text-2xl text-wrap text-white">
           Swap, and send on the leading decentralized crypto trading protocol.
         </p>
-        <button onClick={navigate} className="flex lg:hidden w-32 px-4 py-3 rounded-lg text-[#FFFFFF] launch-button hover:opacity-80 z-10 shadow-lg">
+        <button
+          onClick={() => navigate("/launch")}
+          className="flex lg:hidden w-32 px-4 py-3 rounded-lg text-[#FFFFFF] launch-button hover:opacity-80 z-10 shadow-lg"
+        >
           Launch App
         </button>
         <span className="flex gap-6 text-white text-3xl">
           <TwitterOutlined
-            onClick={() => router.push("https://twitter.com/CrypExplorer")}
+            onClick={() => navigate("https://twitter.com/CrypExplorer")}
             className="hover:opacity-60 cursor-pointer"
           />
           <GithubOutlined
-            onClick={() => router.push("https://github.com/SAJUSAJADH")}
+            onClick={() => navigate("https://github.com/SAJUSAJADH")}
             className="hover:opacity-60 cursor-pointer"
           />
           <LinkedinOutlined
-            onClick={() =>
-              router.push("https://www.linkedin.com/in/sajusajadh/")
-            }
+            onClick={() => navigate("https://www.linkedin.com/in/sajusajadh/")}
             className="hover:opacity-60 cursor-pointer"
           />
         </span>

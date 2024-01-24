@@ -11,7 +11,7 @@ import {
 export default function Home() {
   return (
     <div className="landing-page">
-      <LandingNav />
+      <LandingNav route={""} />
       <LaunchHero />
       <LaunchTag />
       <LaunchingTagTwo />

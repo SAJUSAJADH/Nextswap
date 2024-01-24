@@ -10,12 +10,10 @@ import {
 } from "@ant-design/icons";
 import Image from "next/image";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
 import Menu from "./menu";
 import { navigate } from "@/utils/constants";
-
-
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -152,16 +150,16 @@ export function Footer() {
           <div className="flex gap-4 justify-center items-center">
             <GithubOutlined
               className="text-4xl opacity-40 hover:opacity-100 cursor-pointer"
-              onClick={() => router.push("https://github.com/SAJUSAJADH")}
+              onClick={() => navigate("https://github.com/SAJUSAJADH")}
             />
             <TwitterOutlined
               className="text-4xl opacity-40 hover:opacity-100 cursor-pointer"
-              onClick={() => router.push("https://twitter.com/CrypExplorer")}
+              onClick={() => navigate("https://twitter.com/CrypExplorer")}
             />
             <LinkedinOutlined
               className="text-4xl opacity-40 hover:opacity-100 cursor-pointer"
               onClick={() =>
-                router.push("https://www.linkedin.com/in/sajusajadh/")
+                navigate("https://www.linkedin.com/in/sajusajadh/")
               }
             />
           </div>
@@ -214,23 +212,22 @@ export function MiniHeader() {
   );
 }
 
-export function LandingNav() {
+export function LandingNav({ route }) {
   const router = useRouter();
   const [isToggle, setIstoggle] = useState(false);
 
   const menus = [
-    { name: "Ecosystem", href: "/" },
+    { name: "Ecosystem", href: "/ecosystem" },
     { name: "Community", href: "/" },
     { name: "Governance", href: "/" },
     { name: "Developers", href: "/" },
     { name: "FAQ", href: "/" },
-    { name: "Blogs", href: "/" },
+    { name: "Blogs", href: "/blogs" },
   ];
 
   const open = () => {
     setIstoggle(!isToggle);
   };
-
 
   return (
     <>
@@ -250,14 +247,18 @@ export function LandingNav() {
             {menus.map((menu, index) => (
               <Link
                 key={index}
-                className="text-[#FFFFFF] opacity-60 hover:opacity-100 font-poppins text-md font-semibold py-2"
+                className={
+                  route === menu.name
+                    ? "text-[#FFFFFF] font-poppins text-md font-semibold py-2"
+                    : `text-[#FFFFFF] opacity-60 hover:opacity-100 font-poppins text-md font-semibold py-2`
+                }
                 href={menu.href}
               >
                 {menu.name}
               </Link>
             ))}
             <button
-              onClick={navigate}
+              onClick={() => navigate("/launch")}
               className="px-4 py-2 rounded-lg text-[#FFFFFF] launch-button hover:opacity-80 z-10 shadow-lg"
             >
               Launch App
@@ -284,15 +285,16 @@ export function LandingNav() {
 }
 
 export function LaunchFooter() {
-  const router = useRouter()
+  const router = useRouter();
 
   const pTag = (v1, v2, v3, v4, v5, v6, v7, v8) => {
     const a = [v1, v2, v3, v4, v5, v6, v7, v8];
     const pTags = [];
     for (let i = 0; i < 8; i++) {
+      const pathToRoute = a[i].toLowerCase();
       pTags.push(
         <a
-          href="/"
+          href={`/${pathToRoute}`}
           className={
             i < 4
               ? "text-white flex text-sm justify-start lg:justify-center  cursor-pointer hover:opacity-60 mr-8"
@@ -316,8 +318,8 @@ export function LaunchFooter() {
             "Community",
             "Governance",
             "Developers",
-            "Blog",
-            "Faq",
+            "Blogs",
+            "FAQ",
             "Privacy",
             "Trademark",
           )}
@@ -333,15 +335,15 @@ export function LaunchFooter() {
       </div>
       <div className="flex gap-4 justify-end items-end">
         <TwitterOutlined
-          onClick={() => router.push("https://twitter.com/CrypExplorer")}
+          onClick={() => navigate("https://twitter.com/CrypExplorer")}
           className="text-2xl text-white text-opacity-60 hover:text-opacity-30 cursor-pointer"
         />
         <GithubOutlined
-          onClick={() => router.push("https://github.com/SAJUSAJADH")}
+          onClick={() => navigate("https://github.com/SAJUSAJADH")}
           className="text-2xl text-white text-opacity-60 hover:text-opacity-30 cursor-pointer"
         />
         <LinkedinOutlined
-          onClick={() => router.push("https://www.linkedin.com/in/sajusajadh/")}
+          onClick={() => navigate("https://www.linkedin.com/in/sajusajadh/")}
           className="text-2xl text-white text-opacity-60 hover:text-opacity-30 cursor-pointer"
         />
       </div>

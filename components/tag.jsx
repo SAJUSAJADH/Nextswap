@@ -59,7 +59,7 @@ export function LaunchTag() {
         <div className="grid gap-2 justify-start lg:w-3/5 text-wrap">
           <a
             className="flex text-white font-poppins cursor-pointer z-30 hover:text-opacity-60 text-2xl font-medium"
-            href="/"
+            href="/ecosystem"
           >
             NEXTSWAP ECOSYSTEM{" "}
             <ArrowRightOutlined className="ml-1 text-base pt-[2px]" />
@@ -175,8 +175,8 @@ export function LaunchingTagThree() {
               Governed by the community.
             </p>
             <p className="font-poppins text-[#888D9B] text-xl font-medium text-opacity-90">
-              The Nextswap Protocol is managed by a global community of UNI token
-              holders and delegates.
+              The Nextswap Protocol is managed by a global community of NEXT
+              token holders and delegates.
             </p>
             <button
               onClick={() => router.push("/")}
@@ -189,7 +189,10 @@ export function LaunchingTagThree() {
       </div>
       <div className="mt-14 h-full grid gap-3 py-2">
         <div className={cardFunctions()}>
-          <a href="/" className="text-white text-xl font-medium font-poppins hover:text-opacity-60">
+          <a
+            href="/"
+            className="text-white text-xl font-medium font-poppins hover:text-opacity-60"
+          >
             Governance Forum ↗
           </a>
           <p className="font-poppins text-[#888D9B] text-sm md:text-lg font-semibold text-opacity-90 md:text-opacity-80">
@@ -198,21 +201,27 @@ export function LaunchingTagThree() {
           </p>
         </div>
         <div className={cardFunctions()}>
-          <a href="/" className="text-white text-xl font-medium font-poppins hover:text-opacity-60">
+          <a
+            href="/"
+            className="text-white text-xl font-medium font-poppins hover:text-opacity-60"
+          >
             Sybil ↗
           </a>
           <p className="font-poppins text-[#888D9B] text-sm md:text-lg font-semibold text-opacity-90 md:text-opacity-80">
             Vote on offchain proposals with the Snapshot interface. Votes are
-            weighted by the number of UNI delegates.
+            weighted by the number of NEXT delegates.
           </p>
         </div>
         <div className={cardFunctions()}>
-          <a href="/" className="text-white text-xl font-medium font-poppins hover:text-opacity-60">
+          <a
+            href="/"
+            className="text-white text-xl font-medium font-poppins hover:text-opacity-60"
+          >
             Governance Portal ↗
           </a>
           <p className="font-poppins text-[#888D9B] text-sm md:text-lg font-semibold text-opacity-90 md:text-opacity-80">
             Vote on offchain proposals with the Snapshot interface. Votes are
-            weighted by the number of UNI delegates.
+            weighted by the number of NEXT delegates.
           </p>
         </div>
       </div>
