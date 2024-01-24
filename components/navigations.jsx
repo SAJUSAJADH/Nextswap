@@ -11,6 +11,11 @@ import {
 import Image from "next/image";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import Menu from "./menu";
+import { navigate } from "@/utils/constants";
+
+
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -64,7 +69,7 @@ export function Header() {
             width={50}
             height={50}
             className="cursor-pointer"
-            onClick={() => router.push("/")}
+            onClick={() => router.push("/launch")}
           />
 
           {HeaderNavigations("Swap", "swap")}
@@ -204,6 +209,141 @@ export function MiniHeader() {
         <p className="text-[#7d7d7d] tracking-wider text-md font-roboto font-semibold ">
           NFTs
         </p>
+      </div>
+    </div>
+  );
+}
+
+export function LandingNav() {
+  const router = useRouter();
+  const [isToggle, setIstoggle] = useState(false);
+
+  const menus = [
+    { name: "Ecosystem", href: "/" },
+    { name: "Community", href: "/" },
+    { name: "Governance", href: "/" },
+    { name: "Developers", href: "/" },
+    { name: "FAQ", href: "/" },
+    { name: "Blogs", href: "/" },
+  ];
+
+  const open = () => {
+    setIstoggle(!isToggle);
+  };
+
+
+  return (
+    <>
+      <div className="w-full landing-nav fixed z-50 shadow-md lg:px-3">
+        <div className="flex justify-between items-center py-2 md:py-4 px-4 lg:px-0">
+          <div className="flex justify-center gap-4">
+            <Image
+              src={"/logo.png"}
+              alt="logo"
+              width={50}
+              height={50}
+              className="cursor-pointer"
+              onClick={() => router.push("/")}
+            />
+          </div>
+          <div className="hidden lg:flex justify-center gap-8">
+            {menus.map((menu, index) => (
+              <Link
+                key={index}
+                className="text-[#FFFFFF] opacity-60 hover:opacity-100 font-poppins text-md font-semibold py-2"
+                href={menu.href}
+              >
+                {menu.name}
+              </Link>
+            ))}
+            <button
+              onClick={navigate}
+              className="px-4 py-2 rounded-lg text-[#FFFFFF] launch-button hover:opacity-80 z-10 shadow-lg"
+            >
+              Launch App
+            </button>
+          </div>
+          <div className="flex md:hidden">
+            <button
+              onClick={open}
+              id="menu-btn"
+              className={
+                isToggle
+                  ? "block ml-auto mt-3 text-white md:hidden bg-[#FFFFFF1A] opacity-90 px-4 py-2 rounded-lg"
+                  : "block mt-3 text-white ml-auto md:hidden bg-[#FFFFFF1A] opacity-90 px-4 py-2 rounded-lg"
+              }
+            >
+              menu
+            </button>
+          </div>
+        </div>
+      </div>
+      {isToggle && <Menu />}
+    </>
+  );
+}
+
+export function LaunchFooter() {
+  const router = useRouter()
+
+  const pTag = (v1, v2, v3, v4, v5, v6, v7, v8) => {
+    const a = [v1, v2, v3, v4, v5, v6, v7, v8];
+    const pTags = [];
+    for (let i = 0; i < 8; i++) {
+      pTags.push(
+        <a
+          href="/"
+          className={
+            i < 4
+              ? "text-white flex text-sm justify-start lg:justify-center  cursor-pointer hover:opacity-60 mr-8"
+              : "cursor-pointer hover:opacity-60 text-white flex text-sm justify-start lg:justify-center"
+          }
+          key={i}
+        >
+          {a[i]}
+        </a>,
+      );
+    }
+    return pTags;
+  };
+
+  return (
+    <div className="grid grid-cols-3 gap-1 pt-32 pb-10 px-2 lg:px-10">
+      <div className="col-span-2 grid gap-3">
+        <div className="grid lg:grid-cols-8 gap-3">
+          {pTag(
+            "Ecosystem",
+            "Community",
+            "Governance",
+            "Developers",
+            "Blog",
+            "Faq",
+            "Privacy",
+            "Trademark",
+          )}
+        </div>
+        <div className="w-4/5">
+          <p className="text-white text-sm font-poppins text-opacity-60">
+            Media inquires for Uniswap Labs - Contact{" "}
+            <span className="text-white text-opacity-100 font-semibold hover:text-opacity-60 tracking-widest">
+              <a href="https://nextswap.vercel.app/">nextswap.vercel.app</a>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div className="flex gap-4 justify-end items-end">
+        <TwitterOutlined
+          onClick={() => router.push("https://twitter.com/CrypExplorer")}
+          className="text-2xl text-white text-opacity-60 hover:text-opacity-30 cursor-pointer"
+        />
+        <GithubOutlined
+          onClick={() => router.push("https://github.com/SAJUSAJADH")}
+          className="text-2xl text-white text-opacity-60 hover:text-opacity-30 cursor-pointer"
+        />
+        <LinkedinOutlined
+          onClick={() => router.push("https://www.linkedin.com/in/sajusajadh/")}
+          className="text-2xl text-white text-opacity-60 hover:text-opacity-30 cursor-pointer"
+        />
       </div>
     </div>
   );

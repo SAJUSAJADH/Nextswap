@@ -70,7 +70,7 @@ const Send = () => {
 
   const makeTransaction = async (e) => {
     e.preventDefault();
-    console.log("submitted");
+
     try {
       if (!addressTo || !amount || isLoading || !isConnected) {
         console.log("no required values");

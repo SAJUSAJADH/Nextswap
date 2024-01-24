@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.landing-page{
+  background-color: #191b1f;
+}
+
 .app{
   background: radial-gradient(75% 100% at 70% 100%,#ff007a1a 0,#fff0 100%);
 }
@@ -15,4 +19,20 @@
 
 .ant-popover-arrow {
   visibility: hidden;
+}
+
+.landing-nav{
+  backdrop-filter: blur(4px);
+  background: rgba(25, 27, 31, 0.9);
+  border-bottom: 1px solid rgb(25, 27, 31);
+  transition: background-color 0.25s ease 0s;
+}
+
+.launch-button{
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(95.5deg, rgba(15, 53, 255, 0.3) 12.82%, rgba(255, 72, 181, 0.3) 41.96%, rgba(15, 53, 255, 0.08) 75.06%, rgba(15, 53, 255, 0.11) 107.66%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: rgb(255, 0, 122) 1px 1000px 1px inset;
+  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
