@@ -16,7 +16,7 @@ export default function Tag() {
             style={{ backgroundImage: `url(${backgroundImage})` }}
           >
             <div className="z-20 grid lg:grid-cols-3 justify-center md:justify-start gap-4">
-              <p className="lg:col-span-2 text-white text-2xl md:text-4xl font-semibold tracking-widest">
+              <p className="lg:col-span-2 text-white text-2xl md:text-4xl font-semibold tracking-wider">
                 Powered by the Nextswap Protocol
               </p>
               <button
@@ -26,7 +26,7 @@ export default function Tag() {
                 Live Transactions
               </button>
             </div>
-            <p className="z-20 pt-6 lg:pt-8 text-white text-md lg:text-lg md:text-xl lg:tracking-wider md:tracking-widest">
+            <p className="z-20 pt-6 lg:pt-8 text-white text-md lg:text-lg md:text-xl lg:tracking-wider md:tracking-wider">
               The leading decentralized crypto trading protocol, governed by a
               global community.
             </p>
@@ -49,14 +49,14 @@ export function LaunchTag() {
 
   return (
     <>
-      <div className="hidden md:grid w-full mx-auto lg:grid-cols-4 z-30 px-48 pt-14">
+      <div className="hidden md:grid w-full mx-auto xl:grid-cols-4 z-30 px-48 pt-14">
         {Tags("$489B+", "Trade Volume")}
         {Tags("71M+", "All Time Trades")}
         {Tags("300+", "Integrations")}
         {Tags("4,400+", "Community Delegates")}
       </div>
-      <div className="grid md:grid-cols-2 gap-10 md:gap-6 px-2 md:px-20 pt-16 md:pt-36">
-        <div className="grid gap-2 justify-start lg:w-3/5 text-wrap">
+      <div className="grid lg:grid-cols-2 gap-10 md:gap-6 px-2 md:px-20 pt-16 md:pt-36">
+        <div className="grid gap-2 justify-start xl:w-3/5 text-wrap">
           <a
             className="flex text-white font-poppins cursor-pointer z-30 hover:text-opacity-60 text-2xl font-medium"
             href="/ecosystem"
@@ -72,7 +72,7 @@ export function LaunchTag() {
             a financial marketplace that is open and accessible to all.
           </p>
         </div>
-        <div className="md:flex md:justify-end">
+        <div className="md:flex lg:justify-end">
           <div className="border-white md:w-5/6 h-[290px] md:h-[264px] rounded-xl z-30 relative bg-center px-3">
             <Image
               src={"/apps.png"}
@@ -91,7 +91,7 @@ export function LaunchTag() {
 export function LaunchingTagTwo() {
   const router = useRouter();
   return (
-    <div className="grid md:grid-cols-3 gap-2 px-2 md:px-20 pt-16 md:pt-32">
+    <div className="grid lg:grid-cols-3 gap-6 lg:gap-2 px-2 md:px-20 pt-24 md:pt-32">
       <div className="md:col-span-2 rounded-xl z-30 bg-center px-2 border-white h-[353px] md:h-[420px]">
         <a
           className="flex text-white font-poppins cursor-pointer z-30 hover:text-opacity-60 text-2xl font-medium pb-6"
@@ -118,7 +118,7 @@ export function LaunchingTagTwo() {
             </p>
             <button
               onClick={() => router.push("/")}
-              className="bg-[#FFFFFF1A] hover:bg-opacity-60 hover:text-opacity-60 font-medium px-1 py-2 rounded-xl text-white font-poppins md:w-1/4"
+              className="bg-[#FFFFFF1A] hover:bg-opacity-60 hover:text-opacity-60 font-medium px-1 py-2 rounded-xl text-white font-poppins xl:w-1/4"
             >
               Documentation ↗
             </button>
@@ -153,7 +153,7 @@ export function LaunchingTagThree() {
   };
 
   return (
-    <div className="grid md:grid-cols-2 gap-7 px-2 md:px-20 pt-32">
+    <div className="grid lg:grid-cols-2 gap-10 lg:gap-7 px-2 md:px-20 pt-32">
       <div className="rounded-xl z-30 bg-center px-2 border-white h-[353px] md:h-[420px]">
         <a
           className="flex text-white font-poppins cursor-pointer z-30 hover:text-opacity-60 text-2xl font-medium pb-6"

@@ -13,7 +13,7 @@ export function Functions() {
           >
             <div className="pl-8 col-span-2 md:col-span-1 space-y-16 flex flex-col justify-between px-2">
               <div className="pt-2">
-                <p className="text-2xl font-roboto font-bold">Swap tokens</p>
+                <p className="text-2xl font-poppins font-black">Swap tokens</p>
               </div>
               <div className="mt-auto">
                 <p className="text-md md:text-xl font-poppins font-semibold pb-1 tracking-widest">
@@ -39,7 +39,7 @@ export function Functions() {
           >
             <div className="pl-8 col-span-2 md:col-span-1 space-y-16 flex flex-col justify-between px-2">
               <div className="pt-2">
-                <p className="text-2xl font-roboto font-bold">Send tokens</p>
+                <p className="text-2xl font-poppins font-black">Send tokens</p>
               </div>
               <div className="mt-auto">
                 <p className="text-md md:text-xl font-poppins font-semibold text-justify pb-1 tracking-widest">
@@ -77,7 +77,7 @@ export function Features() {
           >
             <div className="pl-8 col-span-2 flex flex-col justify-between px-2 space-y-16">
               <div className="pt-2">
-                <p className="text-2xl font-roboto font-bold">Swap tokens</p>
+                <p className="text-2xl font-poppins font-black">Swap tokens</p>
               </div>
               <div className="mt-auto">
                 <p className="text-md md:text-xl font-poppins font-semibold pb-1 tracking-widest">
@@ -103,7 +103,7 @@ export function Features() {
           >
             <div className="pl-8 col-span-2 flex flex-col justify-between px-2 space-y-16">
               <div className="pt-2">
-                <p className="text-2xl font-roboto font-bold">Send tokens</p>
+                <p className="text-2xl font-poppins font-black">Send tokens</p>
               </div>
               <div className="mt-auto">
                 <p className="text-md md:text-xl font-poppins font-semibold pb-1 tracking-widest">
@@ -124,7 +124,7 @@ export function Features() {
           >
             <div className="pl-8 col-span-2 flex flex-col justify-between px-2 space-y-16">
               <div className="pt-2">
-                <p className="text-2xl font-roboto font-bold">Explore Tokens</p>
+                <p className="text-2xl font-poppins font-black">Explore Tokens</p>
               </div>
               <div className="mt-auto">
                 <p className="text-md md:text-xl font-poppins font-semibold pb-1 tracking-widest">

@@ -59,8 +59,8 @@ export function Header() {
 
   return (
     <nav className={navbarClasses}>
-      <div className="flex md:grid md:grid-cols-4 lg:gap-28 justify-between items-center ">
-        <div className="hidden md:flex justify-between items-center gap-2">
+      <div className="flex xl:grid xl:grid-cols-4 lg:gap-28 justify-between items-center ">
+        <div className="hidden xl:flex justify-between items-center gap-2">
           <Image
             src={"/logo.png"}
             alt="logo"
@@ -75,7 +75,7 @@ export function Header() {
           {HeaderNavigations("Tokens", "explore")}
           {HeaderNavigations("NFTs", "explore")}
         </div>
-        <div className="flex md:hidden gap-4 justify-between items-center">
+        <div className="flex xl:hidden gap-4 justify-between items-center">
           <Image
             src={"/logo.png"}
             alt="logo"
@@ -85,16 +85,15 @@ export function Header() {
             onClick={() => router.push("/")}
           />
         </div>
-        <div className="hidden md:flex justify-center items-center col-span-2 relative">
+        <div className="hidden xl:flex justify-center items-center col-span-2">
           <Input
             spellCheck={false}
-            className="w-2/3 tracking-widest py-1 pl-10 text-[#7d7d7d] text-md font-roboto font-semibold"
+            className="w-2/3 tracking-widest py-1 pl-10 text-[#7d7d7d] text-md font-poppins font-semibold"
             placeholder="Search tokens and NFT collections"
           />
-          <SearchOutlined className="absolute xl:hidden left-28 cursor-pointer text-[#7d7d7d] text-md" />
         </div>
-        <div className="hidden md:flex">{connectButton()}</div>
-        <div className="flex items-center md:hidden gap-4">
+        <div className="hidden xl:flex">{connectButton()}</div>
+        <div className="flex items-center xl:hidden gap-4">
           <div className="bg-[#F9F9F9] border-4 border-white rounded-xl w-9 h-9 flex justify-center items-center">
             <SearchOutlined className="cursor-pointer px-2 text-[#7d7d7d] text-md ml-auto" />
           </div>
@@ -180,7 +179,7 @@ export function MiniHeader() {
         className="flex justify-center items-center py-3 rounded-l-full hover:bg-[#99a1bd14]"
         onClick={() => router.push("/swap")}
       >
-        <p className="text-[#7d7d7d] tracking-wider text-md font-roboto font-semibold">
+        <p className="text-[#7d7d7d] tracking-wider text-md font-poppins font-semibold">
           Swap
         </p>
       </div>
@@ -188,7 +187,7 @@ export function MiniHeader() {
         className="flex justify-center items-center py-3 hover:bg-[#99a1bd14]"
         onClick={() => router.push("/send")}
       >
-        <p className="text-[#7d7d7d] tracking-wider text-md font-roboto font-semibold">
+        <p className="text-[#7d7d7d] tracking-wider text-md font-poppins font-semibold">
           Send
         </p>
       </div>
@@ -196,7 +195,7 @@ export function MiniHeader() {
         className="flex justify-center items-center py-3 hover:bg-[#99a1bd14]"
         onClick={() => router.push("/explore")}
       >
-        <p className="text-[#7d7d7d] tracking-wider text-md font-roboto font-semibold">
+        <p className="text-[#7d7d7d] tracking-wider text-md font-poppins font-semibold">
           Token
         </p>
       </div>
@@ -204,7 +203,7 @@ export function MiniHeader() {
         className="flex justify-center items-center py-3 hover:bg-[#99a1bd14]"
         onClick={() => router.push("/explore")}
       >
-        <p className="text-[#7d7d7d] tracking-wider text-md font-roboto font-semibold ">
+        <p className="text-[#7d7d7d] tracking-wider text-md font-poppins font-semibold ">
           NFTs
         </p>
       </div>
@@ -264,14 +263,14 @@ export function LandingNav({ route }) {
               Launch App
             </button>
           </div>
-          <div className="flex md:hidden">
+          <div className="flex lg:hidden">
             <button
               onClick={open}
               id="menu-btn"
               className={
                 isToggle
-                  ? "block ml-auto mt-3 text-white md:hidden bg-[#FFFFFF1A] opacity-90 px-4 py-2 rounded-lg"
-                  : "block mt-3 text-white ml-auto md:hidden bg-[#FFFFFF1A] opacity-90 px-4 py-2 rounded-lg"
+                  ? "block ml-auto mt-3 text-white lg:hidden bg-[#FFFFFF1A] opacity-90 px-4 py-2 rounded-lg"
+                  : "block mt-3 text-white ml-auto lg:hidden bg-[#FFFFFF1A] opacity-90 px-4 py-2 rounded-lg"
               }
             >
               menu

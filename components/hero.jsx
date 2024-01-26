@@ -12,10 +12,10 @@ export function Hero() {
   return (
     <div className="container w-full mx-auto px-8 lg:px-32 flex flex-col justify-center gap-4 lg:gap-6 items-center min-h-screen">
       <div className="flex flex-col gap-3">
-        <p className="text-[#FF4FB8] text-2xl lg:text-6xl font-bold font-marryweather text-center">
+        <p className="text-[#FF4FB8] text-2xl md:text-6xl font-bold font-marryweather text-center">
           Swap and Send crypto
         </p>
-        <p className="text-[#FF4FB8] text-2xl lg:text-6xl font-bold font-marrtweather text-center">
+        <p className="text-[#FF4FB8] text-2xl md:text-6xl font-bold font-marrtweather text-center">
           with confidense
         </p>
       </div>

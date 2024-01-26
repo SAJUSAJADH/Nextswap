@@ -44,7 +44,7 @@ function Ecosystem() {
             and tools built on the Uniswap Protocol.
           </p>
         </div>
-        <div className="grid lg:grid-cols-4 gap-4 pt-10">{Ecosystems}</div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5 gap-4 pt-10">{Ecosystems}</div>
       </div>
       <LaunchFooter />
     </div>

@@ -235,7 +235,7 @@ export default function Swap() {
               value={tokenTwoAmount}
               disabled={true}
             />
-            <div className="absolute bg-[#F9F9F9] border-4 border-white rounded-xl w-9 h-9 top-28 right-36 md:right-52 flex justify-center items-center">
+            <div className="absolute bg-[#F9F9F9] border-4 border-white rounded-xl w-9 h-9 top-28 right-1/2 flex justify-center items-center">
               <ArrowDownOutlined onClick={switchToken} className="" />
             </div>
             <div

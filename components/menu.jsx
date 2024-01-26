@@ -8,7 +8,7 @@ export default function Menu() {
     { name: "Governance", href: "/" },
     { name: "Developers", href: "/" },
     { name: "FAQ", href: "/" },
-    { name: "Blogs", href: "/blog" },
+    { name: "Blogs", href: "/blogs" },
   ];
 
   return (
