@@ -10,10 +10,8 @@ function Ecosystem() {
     return (
       <div
         key={index}
-        onClick={() =>
-          navigate(system.link)
-        }
-        className="border border-white border-opacity-20 rounded-2xl hover:bg-[#FFFFFF05] px-2 py-2 grid gap-2 justify-start items-start w-full relative cursor-pointer"
+        onClick={() => navigate(system.link)}
+        className="border border-white border-opacity-20 rounded-2xl ecosystem px-2 py-2 grid gap-2 justify-start items-start w-full relative cursor-pointer"
       >
         <div className="flex  w-full">
           <img src={system.image} className="w-24 h-24 rounded-lg" alt="logo" />
@@ -44,7 +42,9 @@ function Ecosystem() {
             and tools built on the Uniswap Protocol.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5 gap-4 pt-10">{Ecosystems}</div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5 gap-4 pt-10">
+          {Ecosystems}
+        </div>
       </div>
       <LaunchFooter />
     </div>

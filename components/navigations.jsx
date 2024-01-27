@@ -217,10 +217,10 @@ export function LandingNav({ route }) {
 
   const menus = [
     { name: "Ecosystem", href: "/ecosystem" },
-    { name: "Community", href: "/" },
-    { name: "Governance", href: "/" },
-    { name: "Developers", href: "/" },
-    { name: "FAQ", href: "/" },
+    { name: "Community", href: "/community" },
+    { name: "Governance", href: "/governance" },
+    { name: "Developers", href: "/developers" },
+    { name: "FAQ", href: "/faq" },
     { name: "Blogs", href: "/blogs" },
   ];
 
@@ -286,10 +286,10 @@ export function LandingNav({ route }) {
 export function LaunchFooter() {
   const router = useRouter();
 
-  const pTag = (v1, v2, v3, v4, v5, v6, v7, v8) => {
-    const a = [v1, v2, v3, v4, v5, v6, v7, v8];
+  const pTag = (v1, v2, v3, v4, v5, v6) => {
+    const a = [v1, v2, v3, v4, v5, v6];
     const pTags = [];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 6; i++) {
       const pathToRoute = a[i].toLowerCase();
       pTags.push(
         <a
@@ -319,8 +319,6 @@ export function LaunchFooter() {
             "Developers",
             "Blogs",
             "FAQ",
-            "Privacy",
-            "Trademark",
           )}
         </div>
         <div className="w-4/5">

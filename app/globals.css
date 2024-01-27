@@ -36,3 +36,37 @@
   opacity: 0.9;
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
+
+.ecosystem {
+  transition: background 0.3s ease; 
+}
+
+.ecosystem:hover {
+  background: linear-gradient(95.5deg, rgba(15, 53, 255, 0.3) 12.82%, rgba(255, 72, 181, 0.3) 41.96%, rgba(15, 53, 255, 0.08) 75.06%, rgba(15, 53, 255, 0.11) 107.66%);
+}
+
+.governance{
+  animation: transitionIn 2s;
+}
+
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate 9s linear infinite; 
+}

@@ -1,5 +1,14 @@
 import abi from "./abi.json";
 
+import {
+  TwitterOutlined,
+  GithubOutlined,
+  RedditOutlined,
+  LinkedinOutlined,
+  InstagramOutlined,
+  IeOutlined,
+} from "@ant-design/icons";
+
 export const contractABI = abi.abi;
 
 export const contractAddress = "0x0174aE013a8a0C2327c5d8DE697E87591f7c9FB8";
@@ -72,5 +81,45 @@ export const posts = [
       "What is the end goal for crypto and DeFi with respect to TradFi? Crypto maximalists will state that its about Bitcoin, Ether, etc replacing fiat currencies.",
     route:
       "https://techsnoobs.vercel.app/category/Crypto/65b0ccf05a02a0915038bb1f",
+  },
+];
+
+export const communities = [
+  {
+    icon: <GithubOutlined className="mb-1 text-2xl" />,
+    title: "Github",
+    description: "Make your contribution to the Nextswap Community",
+    Link: "https://github.com/SAJUSAJADH",
+  },
+  {
+    icon: <TwitterOutlined className="mb-1 text-2xl" />,
+    title: "Nextswap twitter Labs",
+    description: "Follow the latest news from Nextswap Labs",
+    Link: "https://twitter.com/CrypExplorer",
+  },
+  {
+    icon: <LinkedinOutlined className="mb-1 text-2xl" />,
+    title: "Nextswap Linkedin",
+    description: "Share ideas and participate in Uniswap Governance",
+    Link: "https://www.linkedin.com/in/sajusajadh/",
+  },
+  {
+    icon: <InstagramOutlined className="mb-1 text-2xl" />,
+    title: "Instagram",
+    description:
+      "Stay up to date with announcements from the DeFi Education Fund",
+    Link: "https://www.instagram.com/codeweb3.0/",
+  },
+  {
+    icon: <RedditOutlined className="mb-1 text-2xl" />,
+    title: "Reddit",
+    description: "Contribute to wide-ranging Nextswap discussions",
+    Link: "https://www.reddit.com/",
+  },
+  {
+    icon: <IeOutlined className="mb-1 text-2xl" />,
+    title: "Blogs",
+    description: "Learn about recent grants recipients and program updates",
+    Link: "https://techsnoobs.vercel.app/",
   },
 ];

@@ -124,7 +124,9 @@ export function Features() {
           >
             <div className="pl-8 col-span-2 flex flex-col justify-between px-2 space-y-16">
               <div className="pt-2">
-                <p className="text-2xl font-poppins font-black">Explore Tokens</p>
+                <p className="text-2xl font-poppins font-black">
+                  Explore Tokens
+                </p>
               </div>
               <div className="mt-auto">
                 <p className="text-md md:text-xl font-poppins font-semibold pb-1 tracking-widest">

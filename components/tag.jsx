@@ -58,13 +58,13 @@ export function LaunchTag() {
       <div className="grid lg:grid-cols-2 gap-10 md:gap-6 px-2 md:px-20 pt-16 md:pt-36">
         <div className="grid gap-2 justify-start xl:w-3/5 text-wrap">
           <a
-            className="flex text-white font-poppins cursor-pointer z-30 hover:text-opacity-60 text-2xl font-medium"
+            className="flex text-white mb-4 font-poppins cursor-pointer z-30 hover:text-opacity-60 text-2xl font-medium"
             href="/ecosystem"
           >
             NEXTSWAP ECOSYSTEM{" "}
             <ArrowRightOutlined className="ml-1 text-base pt-[2px]" />
           </a>
-          <p className="text-white font-semibold text-3xl font-poppins">
+          <p className="text-white mb-3 font-semibold text-3xl font-poppins">
             A growing network of DeFi Apps.
           </p>
           <p className="font-poppins text-[#888D9B] text-xl font-medium text-opacity-80">
@@ -73,7 +73,7 @@ export function LaunchTag() {
           </p>
         </div>
         <div className="md:flex lg:justify-end">
-          <div className="border-white md:w-5/6 h-[290px] md:h-[264px] rounded-xl z-30 relative bg-center px-3">
+          <div className="border-white md:w-5/6 h-[290px] md:h-[264px] rounded-xl z-30 relative bg-center px-4 md:px-3">
             <Image
               src={"/apps.png"}
               fill
@@ -91,7 +91,7 @@ export function LaunchTag() {
 export function LaunchingTagTwo() {
   const router = useRouter();
   return (
-    <div className="grid lg:grid-cols-3 gap-6 lg:gap-2 px-2 md:px-20 pt-24 md:pt-32">
+    <div className="grid lg:grid-cols-3 gap-10 lg:gap-2 px-2 md:px-20 mt-28 md:mt-32">
       <div className="md:col-span-2 rounded-xl z-30 bg-center px-2 border-white h-[353px] md:h-[420px]">
         <a
           className="flex text-white font-poppins cursor-pointer z-30 hover:text-opacity-60 text-2xl font-medium pb-6"
@@ -153,7 +153,7 @@ export function LaunchingTagThree() {
   };
 
   return (
-    <div className="grid lg:grid-cols-2 gap-10 lg:gap-7 px-2 md:px-20 pt-32">
+    <div className="grid lg:grid-cols-2 gap-10 lg:gap-7 px-2 md:px-20 mt-36 md:mt-40">
       <div className="rounded-xl z-30 bg-center px-2 border-white h-[353px] md:h-[420px]">
         <a
           className="flex text-white font-poppins cursor-pointer z-30 hover:text-opacity-60 text-2xl font-medium pb-6"

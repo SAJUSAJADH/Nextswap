@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function Menu() {
   const menus = [
     { name: "Ecosystem", href: "/ecosystem" },
-    { name: "Community", href: "/" },
-    { name: "Governance", href: "/" },
-    { name: "Developers", href: "/" },
-    { name: "FAQ", href: "/" },
+    { name: "Community", href: "/community" },
+    { name: "Governance", href: "/governance" },
+    { name: "Developers", href: "/developers" },
+    { name: "FAQ", href: "/faq" },
     { name: "Blogs", href: "/blogs" },
   ];
 
