@@ -85,7 +85,7 @@ function Governance() {
               <p className="text-white text-opacity-60 text-base text-justify font-medium font-poppins lg:w-2/3">
                 The Temperature Check process determines whether there is
                 sufficient will to make changes to the status quo. At the end of
-                the two days, a majority vote with a 25k UNI yes-vote threshold
+                the two days, a majority vote with a 25k NEXT yes-vote threshold
                 wins. If the Temperature check does not suggest a change from
                 the status quo, the topic will be closed on the governance site.
                 If the Temperature Check does suggest a change, proceed to Stage
@@ -101,7 +101,7 @@ function Governance() {
                 Temperature Check and establishes formal discussion around a
                 potential proposal. Consensus Check is accompanied by another
                 off-chain vote. At the end of five days, a majority vote with a
-                50k UNI yes-vote threshold wins.
+                50k NEXT yes-vote threshold wins.
               </p>
             </div>
             <div className={phaseDescription("phase3")}>
@@ -113,8 +113,9 @@ function Governance() {
                 process. The proposal should incorporate feedback from the
                 Consensus Check and is accompanied by executable on-chain code.
                 In order to submit an on-chain Governance proposal, a delegate
-                must have a minimum balance of 2m UNI. The voting period lasts 7
-                days and a majority vote with a 40m UNI yes-vote threshold wins.
+                must have a minimum balance of 2m NEXT. The voting period lasts
+                7 days and a majority vote with a 40m NEXT yes-vote threshold
+                wins.
               </p>
             </div>
           </div>

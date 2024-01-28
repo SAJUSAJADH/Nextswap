@@ -42,7 +42,7 @@ function Blog() {
             alt="blog"
           />
           <p className="text-white xl:absolute xl:bottom-4 font-medium md:font-semibold tracking-wide font-poppins test-base md:text-2xl z-30">
-            Talos Teams up with Uniswap Labs and Fireblocks in Landmark
+            Talos Teams up with Nextswap Labs and Fireblocks in Landmark
             Partnership to Bring DeFi Liquidity to Institutional Investors
           </p>
         </div>

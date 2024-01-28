@@ -100,7 +100,7 @@ export const communities = [
   {
     icon: <LinkedinOutlined className="mb-1 text-2xl" />,
     title: "Nextswap Linkedin",
-    description: "Share ideas and participate in Uniswap Governance",
+    description: "Share ideas and participate in Nextswap Governance",
     Link: "https://www.linkedin.com/in/sajusajadh/",
   },
   {

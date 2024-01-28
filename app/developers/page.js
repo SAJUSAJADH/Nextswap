@@ -1,3 +1,5 @@
+"use client";
+
 import { LandingNav, LaunchFooter } from "@/components/navigations";
 import Image from "next/image";
 import React from "react";
@@ -6,16 +8,21 @@ import {
   FileDoneOutlined,
   GithubOutlined,
 } from "@ant-design/icons";
+import { navigate } from "@/utils/constants";
+import { useRouter } from "next/navigation";
 
 function Developers() {
+  const router = useRouter();
   const styles = {
     cardClasses:
-      "border border-white border-opacity-20 rounded-2xl px-4 py-6 grid gap-5 justify-start hover:bg-[#FFFFFF05]",
+      "border border-white border-opacity-20 rounded-2xl px-4 py-6 grid gap-5 justify-start hover:bg-[#FFFFFF05] cursor-pointer",
     cardTitle: "text-white text-lg font-poppins font-semibold tracking-wider",
     cardDescription:
       "text-white text-base text-opacity-60 font-poppins font-medium tracking-wider",
     Iconstyle: "text-white font-medium text-2xl flex justify-start",
   };
+  const smartContract =
+    "https://sepolia.etherscan.io/address/0x0174ae013a8a0c2327c5d8de697e87591f7c9fb8#code";
 
   return (
     <div className="landing-page ">
@@ -44,7 +51,10 @@ function Developers() {
             </div>
           </div>
           <div className="grid lg:grid-cols-3 gap-4 pt-10">
-            <div className={styles.cardClasses}>
+            <div
+              className={styles.cardClasses}
+              onClick={() => router.push("/faq")}
+            >
               <ExclamationCircleOutlined className={styles.Iconstyle} />
               <p className={styles.cardTitle}>What is Nextswap?</p>
               <p className={styles.cardDescription}>
@@ -52,7 +62,10 @@ function Developers() {
                 Concentrated Liquidity, and more.
               </p>
             </div>
-            <div className={styles.cardClasses}>
+            <div
+              className={styles.cardClasses}
+              onClick={() => navigate(smartContract)}
+            >
               <FileDoneOutlined className={styles.Iconstyle} />
               <p className={styles.cardTitle}>Smart contracts overview</p>
               <p className={styles.cardDescription}>
@@ -60,7 +73,10 @@ function Developers() {
                 contracts, made up of the Core and Periphery libraries.
               </p>
             </div>
-            <div className={styles.cardClasses}>
+            <div
+              className={styles.cardClasses}
+              onClick={() => navigate("https://github.com/SAJUSAJADH")}
+            >
               <GithubOutlined className={styles.Iconstyle} />
               <p className={styles.cardTitle}>Github</p>
               <p className={styles.cardDescription}>
@@ -73,18 +89,18 @@ function Developers() {
         <div className="grid lg:grid-cols-2 gap-8 py-16">
           <div className="flex flex-col gap-4 items-center">
             <p className="text-white text-xl font-poppins font-medium">
-              Apply to the Uniswap Grants Program
+              Apply to the Nextswap Grants Program
             </p>
             <p className="text-white text-base text-opacity-60 font-poppins font-medium">
-              The Uniswap Grants Program empowers independent builders and
+              The Nextswap Grants Program empowers independent builders and
               contributors with resources to experiment. Providing both funding
               and feedback, the Grants team cultivates talent that enriches the
-              Uniswap ecosystem experience and sets the Protocol on a path to
+              Nextswap ecosystem experience and sets the Protocol on a path to
               sustainable community-driven growth.
             </p>
           </div>
           <div className="flex lg:justify-center">
-            <Image src={"/bounty.svg"} width={280} height={280} alt="uni" />
+            <Image src={"/bounty.svg"} width={280} height={280} alt="Next" />
           </div>
         </div>
       </div>

@@ -95,7 +95,7 @@ export function LaunchingTagTwo() {
       <div className="md:col-span-2 rounded-xl z-30 bg-center px-2 border-white h-[353px] md:h-[420px]">
         <a
           className="flex text-white font-poppins cursor-pointer z-30 hover:text-opacity-60 text-2xl font-medium pb-6"
-          href="/"
+          href="/developers"
         >
           DEVELOPERS <ArrowRightOutlined className="ml-1 text-base pt-[2px]" />
         </a>
@@ -117,7 +117,7 @@ export function LaunchingTagTwo() {
               documentation, a Javascript SDK, and fully open source code.
             </p>
             <button
-              onClick={() => router.push("/")}
+              onClick={() => router.push("/developers")}
               className="bg-[#FFFFFF1A] hover:bg-opacity-60 hover:text-opacity-60 font-medium px-1 py-2 rounded-xl text-white font-poppins xl:w-1/4"
             >
               Documentation ↗
@@ -157,7 +157,7 @@ export function LaunchingTagThree() {
       <div className="rounded-xl z-30 bg-center px-2 border-white h-[353px] md:h-[420px]">
         <a
           className="flex text-white font-poppins cursor-pointer z-30 hover:text-opacity-60 text-2xl font-medium pb-6"
-          href="/"
+          href="/governance"
         >
           PROTOCOL GOVERNANCE{" "}
           <ArrowRightOutlined className="ml-1 text-base pt-[2px]" />
@@ -179,7 +179,7 @@ export function LaunchingTagThree() {
               token holders and delegates.
             </p>
             <button
-              onClick={() => router.push("/")}
+              onClick={() => router.push("/governance")}
               className="bg-[#FFFFFF1A] hover:bg-opacity-60 hover:text-opacity-60 font-medium px-1 py-2 rounded-xl text-white font-poppins "
             >
               Read more ↗
@@ -190,7 +190,7 @@ export function LaunchingTagThree() {
       <div className="mt-14 h-full grid gap-3 py-2">
         <div className={cardFunctions()}>
           <a
-            href="/"
+            href="/governance"
             className="text-white text-xl font-medium font-poppins hover:text-opacity-60"
           >
             Governance Forum ↗
@@ -202,7 +202,7 @@ export function LaunchingTagThree() {
         </div>
         <div className={cardFunctions()}>
           <a
-            href="/"
+            href="/governance"
             className="text-white text-xl font-medium font-poppins hover:text-opacity-60"
           >
             Sybil ↗
@@ -214,7 +214,7 @@ export function LaunchingTagThree() {
         </div>
         <div className={cardFunctions()}>
           <a
-            href="/"
+            href="/governance"
             className="text-white text-xl font-medium font-poppins hover:text-opacity-60"
           >
             Governance Portal ↗

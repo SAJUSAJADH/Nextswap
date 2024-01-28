@@ -152,7 +152,7 @@ export const EcosystemData = [
   },
   {
     title: "Unbound Finance",
-    description: "Uniswap v3 LP strategy tool.",
+    description: "Nextswap v3 LP strategy tool.",
     type: "Tool",
     image:
       "https://s.yimg.com/ny/api/res/1.2/goK00DzEO3Qyi945CR8uiQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTMyNg--/https://media.zenfs.com/en/accesswire.ca/4849478350c7977edb75d36d4adcc91d",
@@ -160,7 +160,7 @@ export const EcosystemData = [
   },
   {
     title: "defi-lab.xyz",
-    description: "Uniswap V3 Simulator",
+    description: "Nextswap V3 Simulator",
     type: "Tool",
     image: "https://uniswap.org/cdn-cgi/image/width=96/ecosystem/DefiLab.png",
     link: "https://defi-lab.xyz/",
@@ -191,7 +191,7 @@ export const EcosystemData = [
   },
   {
     title: "Sorbet",
-    description: "Limit orders on Uniswap v2.",
+    description: "Limit orders on Nextswap v2.",
     type: "Dapp",
     image:
       "https://assets.bitdegree.org/crypto-tracker/dapp-logos/polygon/sorbet-finance-logo.png",
@@ -327,7 +327,7 @@ export const EcosystemData = [
   },
   {
     title: "Charm",
-    description: "Liquidity Vaults for Uniswap V3.",
+    description: "Liquidity Vaults for Nextswap V3.",
     type: "Dapp",
     image: "https://uniswap.org/cdn-cgi/image/width=96/ecosystem/Charm.png",
     link: "https://charm.fi/",
@@ -372,7 +372,7 @@ export const EcosystemData = [
   },
   {
     title: "Visor Finance",
-    description: "Liquidity Management for Uniswap v3.",
+    description: "Liquidity Management for Nextswap v3.",
     type: "Dapp",
     image:
       "https://uniswap.org/cdn-cgi/image/width=256/ecosystem/Visor%20Finance.jpeg",
@@ -396,7 +396,7 @@ export const EcosystemData = [
   },
   {
     title: "Universe Finance",
-    description: "Uniswap v3 backtesting tool and smart vault provider",
+    description: "Nextswap v3 backtesting tool and smart vault provider",
     type: "Tool",
     image:
       "https://uniswap.org/cdn-cgi/image/width=256/ecosystem/Universe%20Finance.png",
@@ -435,7 +435,7 @@ export const EcosystemData = [
   },
   {
     title: "Uniswaptimizer",
-    description: "Uniswap v3 Optimal Pool Position Estimation Tool.",
+    description: "Nextswap v3 Optimal Pool Position Estimation Tool.",
     type: "Tool",
     image:
       "https://uniswap.org/cdn-cgi/image/width=96/ecosystem/Uniswaptimizer.jpeg",
@@ -457,7 +457,7 @@ export const EcosystemData = [
   },
   {
     title: "Pine Finance",
-    description: "Limit orders for Uniswap Protocol",
+    description: "Limit orders for Nextswap Protocol",
     type: "Dapp",
     image:
       "https://uniswap.org/cdn-cgi/image/width=256/ecosystem/Pine%20Finance.jpeg",
@@ -472,7 +472,7 @@ export const EcosystemData = [
   },
   {
     title: "Lixir",
-    description: "Active liquidity provision solution for Uniswap v3",
+    description: "Active liquidity provision solution for Nextswap v3",
     type: "Dapp",
     image:
       "https://uniswap.org/cdn-cgi/image/width=256/ecosystem/Lixir%20.jpeg",

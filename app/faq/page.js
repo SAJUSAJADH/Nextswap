@@ -4,7 +4,7 @@ import React from "react";
 function FAQ() {
   return (
     <div className="landing-page ">
-      <LandingNav route={"Developers"} />
+      <LandingNav route={"FAQ"} />
       <div className="min-h-screen pt-40 px-3 md:px-44">
         <div className="w-full flex">
           <p className="text-white text-xl md:text-2xl font-semibold tracking-wider font-poppins">
@@ -16,15 +16,15 @@ function FAQ() {
             What is Nextswap Protocol?
           </p>
           <p className="text-white text-base md:text-lg font-medium text-opacity-60 tracking-wider font-poppins">
-            The Uniswap Protocol is an open-source protocol for providing
+            The Nextswap Protocol is an open-source protocol for providing
             liquidity and trading ERC20 tokens on Ethereum. It eliminates
             trusted intermediaries and unnecessary forms of rent extraction,
             allowing for safe, accessible, and efficient exchange activity. The
             protocol is non-upgradable and designed to be censorship resistant.
           </p>
           <p className="text-white text-base md:text-lg font-medium text-opacity-60 tracking-wider font-poppins">
-            The Uniswap Protocol and the Uniswap Interface were developed by
-            Uniswap Labs.
+            The Nextswap Protocol and the Nextswap Interface were developed by
+            Nextswap Labs.
           </p>
           <p className="text-white text-base md:text-lg font-medium text-opacity-60 tracking-wider font-poppins">
             Check out the Introduction section of our docs for more info on the
@@ -33,10 +33,10 @@ function FAQ() {
         </div>
         <div className="w-full flex flex-col gap-5 border-white border-b border-opacity-20 py-16">
           <p className="text-white text-lg md:text-xl font-semibold tracking-wider font-poppins">
-            How does Uniswap Protocol work?
+            How does Nextswap Protocol work?
           </p>
           <p className="text-white text-base md:text-lg font-medium text-opacity-60 tracking-wider font-poppins">
-            Uniswap is an automated market maker. In practical terms, it is a
+            Nextswap is an automated market maker. In practical terms, it is a
             collection of smart contracts that define a standard way to create
             liquidity pools, provide liquidity, and swap assets.
           </p>
@@ -49,7 +49,7 @@ function FAQ() {
           </p>
           <p className="text-white text-base md:text-lg font-medium text-opacity-60 tracking-wider font-poppins">
             Because reserves are automatically rebalanced after each trade, a
-            Uniswap pool can always be used to buy or sell a token — unlike
+            Nextswap pool can always be used to buy or sell a token — unlike
             traditional exchanges, traders do not need to match with individual
             counterparties to complete a trade. For a more in-depth description,
             check out the Concepts from the documentation.
@@ -57,17 +57,17 @@ function FAQ() {
         </div>
         <div className="w-full flex flex-col gap-5 py-16">
           <p className="text-white text-lg md:text-xl font-semibold tracking-wider font-poppins">
-            How do I use the Uniswap Protocol?
+            How do I use the Nextswap Protocol?
           </p>
           <p className="text-white text-base md:text-lg font-medium text-opacity-60 tracking-wider font-poppins">
             To create a new liquidity pool, provide liquidity, swap tokens, or
-            vote on governance proposals, head over to the Uniswap Interface and
-            connect a Web3 wallet. Remember, each transaction on Ethereum costs
-            Ether (ETH). For a more detailed walkthrough, check out our Help
-            Guides.
+            vote on governance proposals, head over to the Nextswap Interface
+            and connect a Web3 wallet. Remember, each transaction on Ethereum
+            costs Ether (ETH). For a more detailed walkthrough, check out our
+            Help Guides.
           </p>
           <p className="text-white text-base md:text-lg font-medium text-opacity-60 tracking-wider font-poppins">
-            If you’re a developer interested in building on top of the Uniswap
+            If you’re a developer interested in building on top of the Nextswap
             Protocol, please refer to our extensive docs.
           </p>
         </div>
