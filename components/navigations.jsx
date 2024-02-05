@@ -39,7 +39,7 @@ export function Header() {
     return (
       <a
         href={`${link}`}
-        className="text-[#7d7d7d] tracking-widest text-md font-roboto font-semibold hover:bg-[#99a1bd14] px-3 py-1 rounded-lg"
+        className="text-[#7d7d7d] tracking-widest text-md font-poppins font-semibold hover:bg-[#99a1bd14] px-3 py-1 rounded-lg"
       >
         {nav}
       </a>

@@ -13,10 +13,14 @@ import tokenList from "../../utils/tokenList.json";
 import Moralis from "moralis";
 import { useAccount } from "wagmi";
 import { useSendTransaction, useWaitForTransaction } from "wagmi";
+import { useNotification } from "@web3uikit/core";
 import axios from "axios";
+import { Spin } from "antd";
 
 export default function Swap() {
-  const [slippage, setSlippage] = useState(2.5);
+
+  const dispatch = useNotification();
+  const [slippage, setSlippage] = useState(2);
   const [tokenOneAmount, setTokenOneAmount] = useState("");
   const [tokenTwoAmount, setTokenTwoAmount] = useState("");
   const [tokenOne, setTokenOne] = useState(tokenList[0]);
@@ -31,54 +35,37 @@ export default function Swap() {
     data: null,
     value: null,
   });
-  const { data, sendTransaction } = useSendTransaction({
-    request: {
-      from: address,
-      to: String(txDetails.to),
-      data: String(txDetails.data),
-      value: String(txDetails.value),
-    },
-  });
+  const [LoadingState, setLoadingstate] = useState(false)
+  const { data: hash, sendTransaction, isLoading } = useSendTransaction();
+  const { isSuccess } = useWaitForTransaction()
 
-  async function dexSwap() {
-    // try {
-    //   const apiUrl = `https://api.1inch.io/v5.0/1/approve/allowance?tokenAddress=${tokenOne.address}&walletAddress=${address}`;
-    //   const options = {
-    //     method: "GET",
-    //     headers: {
-    //       accept: "application/json",
-    //     },
-    //   };
-    //   const response = await fetch(apiUrl, options);
-    //   const data = await response.json();
-    //   console.log(data);
-    // } catch (error) {
-    //   console.error("Error calling API:", error);
-    // }
-  }
+  //////////////////////
+  ////Notifications////
+  ////////////////////
 
-  async function getPrice(tokenOneAddress, tokenTwoAddress) {
-    noStore();
-    try {
-      const responseOne = await Moralis.EvmApi.token.getTokenPrice({
-        chain: "0x1",
-        address: tokenOneAddress,
-      });
-      const responseTwo = await Moralis.EvmApi.token.getTokenPrice({
-        chain: "0x1",
-        address: tokenTwoAddress,
-      });
-      const usdPrices = {
-        tokenOneprice: responseOne.raw.usdPrice,
-        tokenTwoprice: responseTwo.raw.usdPrice,
-        ratio: responseOne.raw.usdPrice / responseTwo.raw.usdPrice,
-      };
-      await setPrices(usdPrices);
-    } catch (error) {
-      const saveErrorlog = error;
-      // console.error(saveErrorlog)
-    }
-  }
+  const handleApprovalNotification = () => {
+    dispatch({
+      type: "warning",
+      title: "Approval Notification",
+      icon: "",
+      message: "Please approve first !",
+      position: "bottomR",
+    });
+  };
+
+  const handleSuccessNotification = () => {
+    dispatch({
+      type: "success",
+      title: "Approval Notification",
+      icon: "",
+      message: "Transaction Pending !",
+      position: "bottomR",
+    });
+  };
+
+  /////////////////////
+  ///Minor Functions///
+  ////////////////////
 
   function handleSlippageChange(ev) {
     setSlippage(ev.target.value);
@@ -133,10 +120,17 @@ export default function Swap() {
     setIsOpen(false);
   }
 
+
+  ////////////////
+  ///useEffects///
+  ///////////////
+
   useEffect(() => {
-    if (txDetails.to && isConnected) {
-      sendTransaction();
-      console.log();
+    if (txDetails?.to && isConnected) {
+      sendTransaction(txDetails);
+    }
+    if (!txDetails && isConnected) {
+      handleApprovalNotification();
     }
   }, [txDetails]);
 
@@ -160,13 +154,79 @@ export default function Swap() {
     getPrice(tokenList[0].address, tokenList[2].address);
   }, []);
 
+  useEffect(()=>{
+    handleSuccessNotification()
+  },[isSuccess])
+
+
+  ///////////////////////
+  ////core functions////
+  /////////////////////
+
+
+
+  async function dexSwap() {
+    noStore();
+    setLoadingstate(true)
+    const response = await axios.post("/api/allowance", { tokenOne, address });
+    if (response.data?.data?.allowance === "0") {
+      const { data } = await axios.post("/api/approval", { tokenOne, address });
+      await setTxDetails(data.data);
+      setLoadingstate(false)
+      return;
+    }
+    const { data } = await axios.post('/api/convert', { tokenOne, tokenTwo, tokenOneAmount, address, slippage});
+    let decimals = Number(`1E${tokenTwo.decimals}`)
+    setTokenTwoAmount((Number(data.data?.tx.toTokenAmount)/decimals).toFixed(2));
+    setTxDetails(data.data?.tx);
+    setLoadingstate(false)
+  }
+
+
+  //////////////////////
+  //////API Calls//////
+  ////////////////////
+
+  
+
+  async function getPrice(tokenOneAddress, tokenTwoAddress) {
+    noStore();
+    try {
+      const responseOne = await Moralis.EvmApi.token.getTokenPrice({
+        chain: "0x1",
+        address: tokenOneAddress,
+      });
+      const responseTwo = await Moralis.EvmApi.token.getTokenPrice({
+        chain: "0x1",
+        address: tokenTwoAddress,
+      });
+      const usdPrices = {
+        tokenOneprice: responseOne.raw.usdPrice,
+        tokenTwoprice: responseTwo.raw.usdPrice,
+        ratio: responseOne.raw.usdPrice / responseTwo.raw.usdPrice,
+      };
+      await setPrices(usdPrices);
+    } catch (error) {
+      const saveErrorlog = error;
+      // console.error(saveErrorlog)
+    }
+  }
+
+  
+
+  ////////////////////
+  ////Components/////
+  //////////////////
+
+ 
+
   const settings = (
     <>
       <div className="font-bold mb-2">Slippage Tolerance</div>
       <div>
         <Radio.Group value={slippage} onChange={handleSlippageChange}>
-          <Radio.Button value={0.5}>0.5%</Radio.Button>
-          <Radio.Button value={2.5}>2.5%</Radio.Button>
+          <Radio.Button value={1}>1.0%</Radio.Button>
+          <Radio.Button value={2}>2.0%</Radio.Button>
           <Radio.Button value={5}>5.0%</Radio.Button>
         </Radio.Group>
       </div>
@@ -256,11 +316,11 @@ export default function Swap() {
             </div>
           </div>
           <button
-            className="text-[#fff] font-semibold text-center w-full rounded-xl bg-[#FC72FF] py-4 text-xl cursor-pointer hover:bg-pink-400"
-            disabled={!tokenOneAmount || !isConnected}
+            className={`text-[#fff] font-semibold text-center w-full rounded-xl bg-[#FC72FF] py-4 text-xl ${!isConnected && "cursor-not-allowed"} ${!tokenOneAmount ? "cursor-not-allowed" : "cursor-pointer"}`}
+            disabled={!tokenOneAmount || !isConnected || isLoading || LoadingState}
             onClick={dexSwap}
           >
-            Swap
+            {isLoading || LoadingState ? <Spin style={{ color: "white" }} /> : "Swap"}
           </button>
         </div>
       </div>

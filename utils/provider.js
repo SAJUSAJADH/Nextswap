@@ -21,6 +21,7 @@ import {
   lineaTestnet,
 } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
+import { NotificationProvider } from "@web3uikit/core";
 
 const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
 
@@ -79,5 +80,9 @@ const Providers = ({ children }) => {
     </WagmiConfig>
   );
 };
+
+export function NotificationProviders({ children }) {
+  return <NotificationProvider>{children}</NotificationProvider>;
+}
 
 export default Providers;

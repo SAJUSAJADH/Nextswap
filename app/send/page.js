@@ -7,8 +7,12 @@ import { useAccount, useSendTransaction, useWaitForTransaction } from "wagmi";
 import { parseEther } from "viem";
 import { ethers, formatEther } from "ethers";
 import { Spin } from "antd";
+import { useNotification } from "@web3uikit/core";
+
 
 const Send = () => {
+
+  const dispatch = useNotification()
   const { address, isConnected } = useAccount();
   const [balanceAndnetwork, setBalanceAndNetwork] = useState("");
   const [FormData, setFormData] = useState({
@@ -25,6 +29,28 @@ const Send = () => {
 
     return 0;
   });
+
+
+
+  //////////////////////
+  ////Notifications////
+  ////////////////////
+
+  const handlePendingNotification = () => {
+    dispatch({
+      type: "info",
+      title: "Progress Notification",
+      icon: "",
+      message: "Transaction Pending !",
+      position: "bottomR",
+    });
+  };
+
+
+  ////////////////
+  ///useEffects///
+  ///////////////
+
 
   useEffect(() => {
     async function fetchBalanceAndNetwork() {
@@ -50,6 +76,13 @@ const Send = () => {
     }
   }, [isConnected, address]);
 
+
+  ///////////////////////
+  ////core functions////
+  /////////////////////
+
+
+
   const getEthereumContract = async () => {
     const provider = new ethers.BrowserProvider(ethereum);
 
@@ -64,9 +97,7 @@ const Send = () => {
     return transactionContract;
   };
 
-  const handleChange = (e, name) => {
-    setFormData((prevState) => ({ ...prevState, [name]: e.target.value }));
-  };
+  
 
   const makeTransaction = async (e) => {
     e.preventDefault();
@@ -77,6 +108,8 @@ const Send = () => {
         return;
       }
       await sendTransaction({ to: addressTo, value: parseEther(amount) });
+
+      handlePendingNotification();
 
       const amountAsBigInt = BigInt(Math.floor(amount * 1e18));
 
@@ -105,6 +138,14 @@ const Send = () => {
         message: "",
       });
     }
+  };
+
+  /////////////////////
+  ///Minor Functions///
+  ////////////////////
+
+  const handleChange = (e, name) => {
+    setFormData((prevState) => ({ ...prevState, [name]: e.target.value }));
   };
 
   return (

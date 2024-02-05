@@ -12,6 +12,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "@rainbow-me/rainbowkit": "^1.0.9",
+    "@web3uikit/core": "^1.1.5",
     "antd": "^5.13.0",
     "axios": "^1.6.5",
     "cors": "^2.8.5",
