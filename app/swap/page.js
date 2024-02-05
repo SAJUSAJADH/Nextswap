@@ -154,9 +154,6 @@ export default function Swap() {
     getPrice(tokenList[0].address, tokenList[2].address);
   }, []);
 
-  useEffect(()=>{
-    handleSuccessNotification()
-  },[isSuccess])
 
 
   ///////////////////////
