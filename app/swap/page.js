@@ -17,6 +17,9 @@ import { useNotification } from "@web3uikit/core";
 import axios from "axios";
 import { Spin } from "antd";
 
+
+export const revalidate = 1
+
 export default function Swap() {
 
   const dispatch = useNotification();
@@ -127,6 +130,7 @@ export default function Swap() {
 
   useEffect(() => {
     if (txDetails?.to && isConnected) {
+      console.log('calling')
       sendTransaction(txDetails);
     }
     if (!txDetails && isConnected) {
