@@ -130,7 +130,7 @@ export default function Swap() {
 
   useEffect(() => {
     if (txDetails?.to && isConnected) {
-      console.log('calling')
+      // console.log('calling')
       sendTransaction(txDetails);
     }
     if (!txDetails && isConnected) {
